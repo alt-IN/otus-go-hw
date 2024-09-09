@@ -1,4 +1,4 @@
-module github.com/alt-IN/otus-go-hw/hw01_hello_otus
+module github.com/alt-IN/hw01_hello_otus
 
 go 1.22
 
