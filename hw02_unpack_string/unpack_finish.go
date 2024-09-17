@@ -1,7 +1,8 @@
-package hw02unpackstring
+package main
 
 import (
 	"errors"
+	"fmt"
 	"strconv"
 	"strings"
 	"unicode"
@@ -28,4 +29,19 @@ func Unpack(str string) (string, error) {
 		}
 	}
 	return resultStr.String(), nil
+}
+
+func main() {
+	var str = "45"
+	fmt.Println(len(str))
+	temp := []rune(str)
+	for i, v := range temp {
+		fmt.Println(i, v, string(v))
+	}
+
+	// str2 := strings.Builder{}
+	// _, _ = str2.WriteString(str[0:3])
+	// _, _ = str2.WriteString(strings.Repeat(string(str2.String()[2]), 0))
+	str3, err := Unpack(str)
+	fmt.Printf("%#v %#v", str3, err)
 }
